@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>JavaScript Quiz Form</h1>
+    <div id="q1" class="question active">
+        <h3>Question 1 out of 5</h3>
+        <p><strong>Which company developed JavaScript?</strong></p>
+        <form>
+            <input type="radio" id="q1a1" name="q1">
+            <label for="q1a1">Netscape</label><br>
+            <input type="radio" id="q1a2" name="q1">
+            <label for="q1a2">Microsoft</label><br>
+            <input type="radio" id="q1a3" name="q1">
+            <label for="q1a3">Google</label><br>
+            <input type="radio" id="q1a4" name="q1">
+            <label for="q1a4">IBM</label><br>
+        </form>
+        <button onclick="nextQuestion('q1', 'q2')">Next</button>
+    </div>
+    <div id="q2" class="question">
+        <h3>Question 2 of 5</h3>
+        <p><strong>Inside which HTML element do we put the JavaScript code?</strong></p>
+        <form>
+            <input type="radio" id="q2a1" name="q2">
+            <label for="q2a1">&lt;js&gt;</label><br>
+            <input type="radio" id="q2a2" name="q2">
+            <label for="q2a2">&lt;javascript&gt;</label><br>
+            <input type="radio" id="q2a3" name="q2">
+            <label for="q2a3">&lt;script&gt;</label><br>
+            <input type="radio" id="q2a4" name="q2">
+            <label for="q2a4">&lt;code&gt;</label><br>
+        </form>
+        <button onclick="prevQuestion('q2', 'q1')">Previous</button>
+        <button onclick="nextQuestion('q2', 'q3')">Next</button>
+    </div>
+
+    <div id="q3" class="question">
+        <h3>Question 3 of 5</h3>
+        <p><strong>Which symbol is used for comments in JavaScript?</strong></p>
+        <form>
+            <input type="radio" id="q3a1" name="q3">
+            <label for="q3a1">//</label><br>
+            <input type="radio" id="q3a2" name="q3">
+            <label for="q3a2">#</label><br>
+            <input type="radio" id="q3a3" name="q3">
+            <label for="q3a3">--</label><br>
+            <input type="radio" id="q3a4" name="q3">
+            <label for="q3a4">\\</label><br>
+        </form>
+        <button onclick="prevQuestion('q3', 'q2')">Previous</button>
+        <button onclick="nextQuestion('q3', 'q4')">Next</button>
+    </div>
+    <div id="q4" class="question">
+        <h3>Question 4 of 5</h3>
+        <p><strong>What is the correct way to declare a variable in JavaScript?</strong></p>
+        <form>
+            <input type="radio" id="q4a1" name="q4">
+            <label for="q4a1">let x = 5;</label><br>
+            <input type="radio" id="q4a2" name="q4">
+            <label for="q4a2">int x = 5;</label><br>
+            <input type="radio" id="q4a3" name="q4">
+            <label for="q4a3">x := 5</label><br>
+            <input type="radio" id="q4a4" name="q4">
+            <label for="q4a4">var x == 5;</label><br>
+        </form>
+        <button onclick="prevQuestion('q4', 'q3')">Previous</button>
+        <button onclick="nextQuestion('q4', 'q5')">Next</button>
+    </div>
+    <div id="q5" class="question">
+        <h3>Question 5 of 5</h3>
+        <p><strong>Which method is used to write something to the browser console?</strong></p>
+        <form>
+            <input type="radio" id="q5a1" name="q5">
+            <label for="q5a1">console.write()</label><br>
+            <input type="radio" id="q5a2" name="q5">
+            <label for="q5a2">console.log()</label><br>
+            <input type="radio" id="q5a3" name="q5">
+            <label for="q5a3">print()</label><br>
+            <input type="radio" id="q5a4" name="q5">
+            <label for="q5a4">write.console()</label><br>
+        </form>
+        <button onclick="prevQuestion('q5', 'q4')">Previous</button>
+        <button onclick="submitJSQuiz()">Submit</button>
+    </div>
+    <div id="result" class="question">
+        <h2>🎉JavaScript Quiz Completed! 🎉</h2>
+        <p id="score-display"></p>
+        <p class="emoji">🏆✨👏</p>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>CSS Quiz Form</h1>
+
+    <div id="q1" class="question active">
+        <h3>Question 1 out of 5</h3>
+        <p><strong>What does CSS stand for?</strong></p>
+        <form>
+            <input type="radio" id="q1a1" name="q1">
+            <label for="q1a1" name="q1">Cascading Style Sheets</label><br>
+            <input type="radio" id="q1a2" name="q1">
+            <label for="q1a2" name="q1">Creative style sheets</label><br>
+            <input type="radio" id="q1a3" name="q1">
+            <label for="q1a3">Colorful Style Sheets</label><br>
+            <input type="radio" id="q1a4" name="q1">
+            <label for="q1a4">Computer Style Sheets</label><br>
+        </form>
+        <button onclick="nextQuestion('q1', 'q2')">Next</button>
+    </div>
+    <div id="q2" class="question">
+        <h3>Question 2 out of 5</h3>
+        <p><strong>Where in an HTML document is the correct place to refer to an external style sheet?</strong></p>
+        <form>
+            <input type="radio" id="q2a1" name="q2">
+            <label for="q2a1" name="q2">At the end of the document</label><br>
+            <input type="radio" id="q2a2" name="q2">
+            <label for="q2a2" name="q2">In the body section</label><br>
+            <input type="radio" id="q2a3" name="q2">
+            <label for="q2a3">In the head section</label><br>
+        </form>
+        <button onclick="prevQuestion('q2', 'q1')">Previous</button>
+        <button onclick="nextQuestion('q2', 'q3')">Next</button>
+    </div>
+    <div id="q3" class="question">
+        <h3>Question 3 out of 5</h3>
+        <p><strong>Which HTML tag is used to define an internal style sheet?</strong></p>
+        <form>
+            <input type="radio" id="q3a1" name="q3">
+            <label for="q3a1" name="q3">css tag
+            </label><br>
+            <input type="radio" id="q3a2" name="q3">
+            <label for="q3a2" name="q3">style tag
+            </label><br>
+            <input type="radio" id="q3a3" name="q3">
+            <label for="q3a3" name="q3">script tag</label><br>
+            </label><br>
+        </form>
+        <button onclick="prevQuestion('q3', 'q2')">Previous</button>
+        <button onclick="nextQuestion('q3', 'q4')">Next</button>
+    </div>
+    <div id="q4" class="question">
+        <h3>Question 4 out of 5</h3>
+        <p><strong>Which is the correct CSS syntax?</strong></p>
+        <form>
+            <input type="radio" id="q4a1" name="q4">
+            <label for="q4a1" name="q4">body:color=black;
+            </label><br>
+            <input type="radio" id="q4a2" name="q4">
+            <label for="q4a2" name="q4">{body;color:black;}
+            </label><br>
+            <input type="radio" id="q4a3" name="q4">
+            <label for="q4a3" name="q4">body {color: black;}
+            </label><br>
+            <input type="radio" id="q4a4" name="q4">
+            <label for="q4a4" name="q4">{body:color: black;}
+            </label><br>
+        </form>
+        <button onclick="prevQuestion('q4', 'q3')">Previous</button>
+        <button onclick="nextQuestion('q4', 'q5')">Next</button>
+    </div>
+    <div id="q5" class="question">
+        <h3>Question 5 out of 5</h3>
+        <p><strong>How do you insert a comment in a CSS file?</strong></p>
+        <form>
+            <input type="radio" id="q5a1" name="q5">
+            <label for="q5a1" name="q5">/* this is a comment */
+            </label><br>
+            <input type="radio" id="q5a2" name="q5">
+            <label for="q5a2" name="q5">// this is a comment //
+            </label><br>
+            <input type="radio" id="q5a3" name="q5">
+            <label for="q5a3" name="q5">// this is a comment
+            </label><br>
+            <input type="radio" id="q5a4" name="q5">
+            <label for="q5a4" name="q5">'this is a comment
+            </label><br>
+        </form>
+        <button onclick="prevQuestion('q5', 'q4')">Previous</button>
+        <button onclick="SubmitQuiz()">Submit</button>
+    </div>
+    <div id="result" class="question">
+        <h2>🎉CSS Quiz Completed! 🎉</h2>
+        <p id="score-display"></p>
+        <p class="emoji">🏆✨👏</p>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

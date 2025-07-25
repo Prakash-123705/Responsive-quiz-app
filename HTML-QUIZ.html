@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Quiz Form</h1>
+    <div id="q1" class="question active">
+        <h3>Question 1 out of 5</h3>
+        <p><strong>What does HTML stands for?</strong></p>
+        <form>
+            <input type="radio" id="q1a1" name="q1">
+            <label for="q1a1" name="q1">Hyper Text Markup Language</label><br>
+            <input type="radio" id="q1a2" name="q1">
+            <label for="q1a2" name="q1">Hyperlinks and Text Markup Language</label><br>
+            <input type="radio" id="q1a3" name="q1">
+            <label for="q1a3">Home Tool Markup Language</label><br>
+        </form>
+        <button onclick="nextQuestion('q1', 'q2')">Next</button>
+    </div>
+    <div id="q2" class="question">
+        <h3>Question 2 out of 5</h3>
+        <p><strong>Who is making the Web standards?</strong></p>
+        <form>
+            <input type="radio" id="q2a1" name="q2">
+            <label for="q2a1" name="q2">Microsoft</label><br>
+            <input type="radio" id="q2a2" name="q2">
+            <label for="q2a2" name="q2">World wide web Consortium</label><br>
+            <input type="radio" id="q2a3" name="q2">
+            <label for="q2a3">Google</label><br>
+            <input type="radio" id="q2a4" name="q2">
+            <label for="q2a4">Mozilla</label><br>
+        </form>
+        <button onclick="prevQuestion('q2', 'q1')">Previous</button>
+        <button onclick="nextQuestion('q2', 'q3')">Next</button>
+    </div>
+    <div id="q3" class="question">
+        <h3>Question 3 out of 5</h3>
+        <p><strong>Choose the correct HTML element for the largest heading:</strong></p>
+        <form>
+            <input type="radio" id="q3a1" name="q3">
+            <label for="q3a1" name="q3">h1 tag
+            </label><br>
+            <input type="radio" id="q3a2" name="q3">
+            <label for="q3a2" name="q3">h6 tag
+            </label><br>
+            <input type="radio" id="q3a3" name="q3">
+            <label for="q3a3" name="q3">head tag
+            </label><br>
+            <input type="radio" id="q3a4" name="q3">
+            <label for="q3a4">heading tag
+            </label><br>
+        </form>
+        <button onclick="prevQuestion('q3', 'q2')">Previous</button>
+        <button onclick="nextQuestion('q3', 'q4')">Next</button>
+    </div>
+    <div id="q4" class="question">
+        <h3>Question 4 out of 5</h3>
+        <p><strong>What is the correct HTML element for inserting a line break?</strong></p>
+        <form>
+            <input type="radio" id="q4a1" name="q4">
+            <label for="q4a1" name="q4">lb tag
+            </label><br>
+            <input type="radio" id="q4a2" name="q4">
+            <label for="q4a2" name="q4">break tag
+            </label><br>
+            <input type="radio" id="q4a3" name="q4">
+            <label for="q4a3" name="q4">br tag
+            </label><br>
+        </form>
+        <button onclick="prevQuestion('q4', 'q3')">Previous</button>
+        <button onclick="nextQuestion('q4', 'q5')">Next</button>
+    </div>
+    <div id="q5" class="question">
+        <h3>Question 5 out of 5</h3>
+        <p><strong>Choose the correct HTML element to define important text</strong></p>
+        <form>
+            <input type="radio" id="q5a1" name="q5">
+            <label for="q5a1" name="q5">i tag
+            </label><br>
+            <input type="radio" id="q5a2" name="q5">
+            <label for="q5a2" name="q5">Strong tag
+            </label><br>
+            <input type="radio" id="q5a3" name="q5">
+            <label for="q5a3" name="q5">b tag
+            </label><br>
+            <input type="radio" id="q5a4" name="q5">
+            <label for="q5a4" name="q5">important tag
+            </label><br>
+        </form>
+        <button onclick="prevQuestion('q5', 'q4')">Previous</button>
+        <button onclick="submitQuiz()">Submit</button>
+    </div>
+    <div id="result" class="question">
+        <h2>🎉HTML Quiz Completed! 🎉</h2>
+        <p id="score-display"></p>
+        <p class="emoji">🏆✨👏</p>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
